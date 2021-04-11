@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF8AA0432622D97E0081ECCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9EFB802621005E005CA851 /* ViewController.m */; };
 		BF9EFB7B2621005E005CA851 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9EFB7A2621005E005CA851 /* AppDelegate.m */; };
 		BF9EFB7E2621005E005CA851 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9EFB7D2621005E005CA851 /* SceneDelegate.m */; };
-		BF9EFB812621005E005CA851 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9EFB802621005E005CA851 /* ViewController.m */; };
 		BF9EFB842621005E005CA851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9EFB822621005E005CA851 /* Main.storyboard */; };
 		BF9EFB8626210062005CA851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9EFB8526210062005CA851 /* Assets.xcassets */; };
 		BF9EFB8926210062005CA851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9EFB8726210062005CA851 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF9EFB762621005E005CA851 /* TypingAlarmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypingAlarmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF9EFB762621005E005CA851 /* TypingAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypingAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9EFB792621005E005CA851 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF9EFB7A2621005E005CA851 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BF9EFB7C2621005E005CA851 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		BF9EFB772621005E005CA851 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF9EFB762621005E005CA851 /* TypingAlarmApp.app */,
+				BF9EFB762621005E005CA851 /* TypingAlarm.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +93,7 @@
 			);
 			name = TypingAlarmApp;
 			productName = TypingAlarmApp;
-			productReference = BF9EFB762621005E005CA851 /* TypingAlarmApp.app */;
+			productReference = BF9EFB762621005E005CA851 /* TypingAlarm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,9 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF9EFB812621005E005CA851 /* ViewController.m in Sources */,
 				BF9EFB7B2621005E005CA851 /* AppDelegate.m in Sources */,
 				BF9EFB8C26210062005CA851 /* main.m in Sources */,
+				BF8AA0432622D97E0081ECCB /* ViewController.m in Sources */,
 				BF9EFB7E2621005E005CA851 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +297,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abulhab.zena.TypingAlarmApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TypingAlarm;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -314,7 +314,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.abulhab.zena.TypingAlarmApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TypingAlarm;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
