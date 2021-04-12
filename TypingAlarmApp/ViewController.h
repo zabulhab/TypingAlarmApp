@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (BOOL)stringMatch:(NSString*)quotePtr withNSString:(NSString*)textPtr;
 
 @end
 
