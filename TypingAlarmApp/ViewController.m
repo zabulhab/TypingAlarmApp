@@ -11,7 +11,6 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *quoteLabel;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-@property UIColor *startColor;
 @property int firstBadIdx;
 
 @end
@@ -20,23 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _quoteLabel.text = @"quote";
-    _startColor = _textField.textColor;
+    _quoteLabel.text = @"quote"; // TODO: user sets this
     _firstBadIdx = -1;
     // Do any additional setup after loading the view.
 }
 
+/**
+ Determine what color to make text based on what is input.
+ Constant time algorithm since only currents chars are compared
+ */
 - (IBAction)checkForChange:(id)sender {
     UITextField *text = (UITextField*)sender;
     if(text == _textField) // if user changed quote-copying text object
     {
+        // if just deleted bad idx, reset to -1
         if (_textField.text.length == _firstBadIdx)
         {
             _firstBadIdx = -1;
         }
+        // if no text, return and set to start color
         if (_textField.text.length==0)
         {
-            text.textColor = _startColor;
             return;
         }
         // loop to check if texts match
@@ -56,10 +59,14 @@
             }
         }
         
-
+        // TODO: if user finished matching quote, show success feedback
     }
 }
 
+/**
+ Compares two chars and returns true if they are equal, false if not.
+ Used for most recently input character and corresponding quote character
+ */
 - (BOOL)stringMatch:(NSString*)quotePtr withNSString:(NSString*)textPtr
 {
 //    NSInteger curTextLen = textPtr.length;
