@@ -21,6 +21,8 @@
     [super viewDidLoad];
     _quoteLabel.text = @"quote"; // TODO: user sets this
     _firstBadIdx = -1;
+    //NSLog([self.storyboard valueForKey:@"name"]);
+    //self.storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]
     // Do any additional setup after loading the view.
 }
 
@@ -58,8 +60,14 @@
                 _firstBadIdx = (int)text.text.length-1;
             }
         }
-        
+
         // TODO: if user finished matching quote, show success feedback
+         
+        if ([text.text isEqualToString:_quoteLabel.text])
+        {
+            UICollectionViewController* alarms = [self.storyboard instantiateViewControllerWithIdentifier:@"alarmsVC"];
+            [self.navigationController pushViewController:alarms animated:YES];
+        }
     }
 }
 
